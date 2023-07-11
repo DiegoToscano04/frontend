@@ -1,0 +1,33 @@
+<h1 class="titulo text-center">Lista de Trabajadores Actuales</h1>
+<div class="container">
+  <div class="row">
+    <div clas="col">
+<table class="tabla my-5 ">
+  <thead class="">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Cargo</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let empleado of empleados">
+      <td>{{empleado.nombre}}</td>
+      <td>{{empleado.apellido}}</td>
+      <td>{{empleado.email}}</td>
+      <td>{{empleado.cargo}}</td>
+      <div class="content-center">
+      <td>
+        <button (click)= "actualizarEmpleado(empleado.id)" id="btn1"class="btn btn-warning ">Actualizar</button>
+        <button (click)= "eliminarEmpleado(empleado.id)" id="btn2"class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+        <button (click)= "verDetallesDelEmpleado(empleado.id)" id="btn3"class="btn btn-success" style="margin-left : 10px;">Detalles</button>
+      </td>
+    </div>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>

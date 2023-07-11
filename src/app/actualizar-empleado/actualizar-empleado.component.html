@@ -1,0 +1,71 @@
+
+<div class="container col-md-6 offset-md-3 my-3">
+
+  <h3 class="text-center mb-4 text-light">Actualizar Empleado</h3>
+
+  
+  <form (ngSubmit)= "onSubmit()" #empleadoForm="ngForm">
+      <div class="text-secondary input-field form-group mb-3">
+          
+          <input type="text" class="form-control" id="nombre" [(ngModel)] = "empleado.nombre" name="nombre" required="" placeholder="Digite su nombre" minlength="4" maxlength="15" #nombre = "ngModel">
+          <div class="alert alert-danger" *ngIf= "nombre.invalid && (nombre.dirty || nombre.touched)">
+              <div class="alert">
+            <div *ngIf = "nombre.hasError('required')" class = "text-danger">
+                  Digite su nombre por favor
+                </div>
+                <div *ngIf = "nombre.hasError('minlength')" class = "text-danger">
+                  Debe contener mínimo 4 caracteres
+                </div>
+              </div>
+          </div> 
+
+      </div>
+      <div class="input-field form-group mb-3">
+        
+          <input type="text" class="form-control" id="apellido" [(ngModel)] = "empleado.apellido" name="apellido" required="" placeholder="Digite su apellido" minlength="4" maxlength="15" #apellido = "ngModel"> 
+          <div class="alert alert-danger" *ngIf= "apellido.invalid && (apellido.dirty || apellido.touched)">
+            <div class="alert">
+            <div *ngIf = "apellido.hasError('required')" class = "text-danger">
+                  Digite su apellido por favor
+                </div>
+                <div *ngIf = "apellido.hasError('minlength')" class = "text-danger">
+                  Debe contener mínimo 4 caracteres
+                </div>
+              </div>
+          </div> 
+      </div>
+      <div class="input-field form-group mb-3">
+          
+          <input type="email" class="form-control" id="email" [(ngModel)] = "empleado.email" name="email" required="" placeholder="Digite su email" #email = "ngModel" pattern ="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"> 
+          <div class="alert alert-danger" *ngIf= "email.invalid && (email.dirty || email.touched)">
+            <div class="alert">  
+            <div *ngIf = "email.hasError('required')" class = "text-danger">
+                  Digite su email por favor
+                </div>
+                <div *ngIf = "email.hasError('pattern')" class = "text-danger">
+                  Para que sea válido debe contener @example.com
+                </div>
+              </div>
+
+          </div> 
+      </div>
+      <div class="input-field form-group mb-3">
+        
+        <input type="text" class="form-control" id="cargo" [(ngModel)] = "empleado.cargo" name="cargo" required="" placeholder="Digite el cargo " minlength="4" maxlength="40" #cargo = "ngModel">
+        <div class="alert alert-danger" *ngIf= "cargo.invalid && (cargo.dirty || cargo.touched)">
+          <div class="alert"> 
+          <div *ngIf = "cargo.hasError('required')" class = "text-danger">
+                Digite su cargo por favor
+              </div>
+              <div *ngIf = "cargo.hasError('minlength')" class = "text-danger">
+                Debe contener mínimo 4 caracteres
+              </div>
+             </div>
+        </div> 
+
+    </div>
+      
+      <button class="btn btn-danger" [disabled]= "!empleadoForm.form.valid">Guardar</button>
+  
+  </form>
+</div> 

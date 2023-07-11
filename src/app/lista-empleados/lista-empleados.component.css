@@ -1,0 +1,94 @@
+.btn{
+    display: inline-block;
+    padding: 14px 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    background: rgba(175, 175, 175, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(122, 122, 122, 0.37);
+    border-radius: 40px;
+    border: none;
+    color: rgb(85, 85, 85);
+    
+}
+#btn1:hover{
+    background: rgba(94, 94, 94, 0.37);
+}
+#btn2:hover{
+    background: rgba(255, 0, 0, 0.61);
+}
+#btn3:hover{
+    background: rgba(185, 184, 255, 0.589);
+}
+
+#btn1{
+    background: rgba(216, 216, 216, 0.699);
+}
+
+#btn2{
+    background: rgba(255, 85, 85, 0.589);
+}
+
+#btn3{
+    background: rgba(210, 226, 255, 0.589);
+}
+
+@media(min-width: 768px){
+
+    .btn{
+        padding: 4px 8px;
+    }
+}
+
+.titulo{
+    font-family: 'open sans';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    
+
+}
+
+.container{
+    width: 1000px;
+    border-radius: 8px;
+    padding: 25px 50px;
+    margin-top: 2em;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur (2px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    
+}
+.tabla{
+    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50px;
+    
+}
+
+thead{
+    
+    background: rgba(42, 131, 89, 0.37);
+}
+
+th{  
+    padding: 20px 15px;
+    font-weight: 1000;
+}
+td{
+    padding: 15px;
+   
+    background: rgba(73, 201, 141, 0.37);
+}
+tbody tr{
+    cursor: pointer;
+}
+tbody tr:hover{
+    background: rgba(255, 255, 255, 0.37);
+}
